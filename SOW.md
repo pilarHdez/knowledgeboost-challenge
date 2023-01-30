@@ -1,5 +1,5 @@
-1. Project Vision:
-The Client wants Gobant to develop a microservice for the retrieval of the current weather data for a given city by using the OpenWeather API.
+Project Vision:
+The Client wants IT Company to develop a microservice for the retrieval of the current weather data for a given city by using the OpenWeather API.
 						
 Section 1 - Prerequisites.
 JDK 8+.
@@ -14,7 +14,7 @@ The branch must follow the pattern: https://<REPO>/{userName}
 Section 2. - Requisites
 
 
-Description of Services to be completed by Globant (the “Services”):			
+Description of Services to be completed by IT Company (the “Services”):			
 The microservice should implement two endpoints:
 weather/city/{cityName}
 weather/latitude/{latitude}/longitude/{longitude}
