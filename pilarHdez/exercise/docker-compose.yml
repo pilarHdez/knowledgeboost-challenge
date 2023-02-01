@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  mysql-development:
+    image: mysql:8.0.17
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: app
+    ports:
+      - "3308:3306"
+    networks:
+      - spring-cloud-network
+    volumes:
+      - "./scripts/schema.sql:/docker-entrypoint-initdb.d/1.sql"
+
+  globant-exercise:
+    container_name: globant-exercise
+    build:
+        context: ./
+        dockerfile: Dockerfile
+    image: exercise:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - spring-cloud-network
+    depends_on:
+      - mysql-development
+networks:
+  spring-cloud-network:
+    driver: bridge
